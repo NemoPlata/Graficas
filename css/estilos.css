@@ -1,0 +1,30 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	background-color: #4271B0;
+}
+
+h1{
+	color: white;
+}
+
+h3{
+	color: white;
+}
+
+p{
+	font-size: 20px;
+	color: white;
+}
+
+a{
+	font-size: 30px;
+	color: #A6EDF5;
+}
+
+#anychart-embed-samples-bct-scatter-chart-03{
+	margin-top: 200px;
+}

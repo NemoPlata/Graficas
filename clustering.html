@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<title>Graficas HTML y JS</title>
+</head>
+<body>
+	<br><br>
+	<center>
+		<h1>Ejemplo de Clustering</h1>
+		<br>
+		<h3>Benítez Plata Nehemías 4IV7</h3>
+	</center>
+	<br><br>
+	<center>
+		<div id="anychart-embed-samples-bct-quadrant-chart-02" class="anychart-embed anychart-embed-samples-bct-quadrant-chart-02">
+			<script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-base.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+			<script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-exports.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+			<script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-ui.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+			<div id="ac_style_samples-bct-quadrant-chart-02" style="display:none;">
+			html, body, #container {
+		    	width: 100%;
+		    	height: 100%;
+		    	margin: 0;
+		    	padding: 0;
+			}
+			</div>
+			<script>
+				(function(){
+				function ac_add_to_head(el){
+					var head = document.getElementsByTagName('head')[0];
+					head.insertBefore(el,head.firstChild);
+				}
+				function ac_add_link(url){
+					var el = document.createElement('link');
+					el.rel='stylesheet';el.type='text/css';el.media='all';el.href=url;
+					ac_add_to_head(el);
+				}
+				function ac_add_style(css){
+					var ac_style = document.createElement('style');
+					if (ac_style.styleSheet) ac_style.styleSheet.cssText = css;
+					else ac_style.appendChild(document.createTextNode(css));
+					ac_add_to_head(ac_style);
+				}
+				ac_add_link('https://cdn.anychart.com/releases/8.7.1/css/anychart-ui.min.css?hcode=a0c21fc77e1449cc86299c5faa067dc4');
+				ac_add_style(document.getElementById("ac_style_samples-bct-quadrant-chart-02").innerHTML);
+				ac_add_style(".anychart-embed-samples-bct-quadrant-chart-02{width:600px;height:450px;}");
+				})();
+			</script>
+			<div id="container"></div>
+			<script>
+				anychart.onDocumentReady(function () {
+
+				    // create data for the first series
+				    var data_1 = [
+				      {x: 4.98, value: 65.2},
+				      {x: 9.14, value: 68.9},
+				      {x: 4.03, value: 61.1},
+				      {x: 2.94, value: 45.8},
+				      {x: 5.33, value: 54.2},
+				      {x: 5.21, value: 58.7},
+				      {x: 2.43, value: 66.6},
+				      {x: 9.15, value: 16.1},
+				      {x: 4.98, value: 45.2},
+				      {x: 9.14, value: 38.9},
+				      {x: 4.03, value: 61.1},
+				      {x: 6.94, value: 45.8},
+				      {x: 4.33, value: 24.2},
+				      {x: 3.21, value: 38.7},
+				      {x: 2.43, value: 26.6},
+				      {x: 11.15, value: 16.1},
+				      {x: 25.21, value: 38.7},
+				      {x: 21.43, value: 26.6},
+				      {x: 15.15, value: 16.1}			  
+				    ];
+
+				    // create data for the second series
+				    var data_2 = [
+				      {x: 96.1, value: 19.15},
+				      {x: 90, value: 29.93},
+				      {x: 85.9, value: 17.1},
+				      {x: 94.3, value: 20.45},
+				      {x: 82.9, value: 13.27},
+				      {x: 79, value: 15.71},
+				      {x: 81.8, value: 8.26},
+				      {x: 84.5, value: 50.26},
+				      {x: 86.5, value: 48.47},
+				      {x: 79.3, value: 36.58},
+				      {x: 81.7, value: 34.67},
+				      {x: 86.6, value: 41.28},
+				      {x: 79.5, value: 71.02},
+				      {x: 98.1, value: 73.83},
+				      {x: 89.2, value: 49.6},
+				      {x: 91.7, value: 85.2},
+				      {x: 63, value: 14.5},
+				      {x: 61.7, value: 76.67},
+				      {x: 66.6, value: 31.28},
+				      {x: 69.5, value: 71.02},
+				      {x: 75.1, value: 73.83},
+				      {x: 83.2, value: 89.6},
+				      {x: 82.7, value: 45.2},
+				      {x: 74, value: 74.5}			     
+				    ];
+
+				    var chart = anychart.quadrant();
+				    var series1 = chart.marker(data_1);
+				    series1.normal().fill("#FF0000", 0.3);
+				    series1.hovered().fill("#FF0000", 0.3);
+				    series1.selected().fill("#FF0000", 0.5);
+				    series1.normal().stroke("#FF0000", 1);
+				    series1.hovered().stroke("#FF0000", 2);
+				    series1.selected().stroke("#FF0000", 4);
+
+				    var series2 = chart.marker(data_2);
+				    series2.normal().stroke("#00cc99", 3, "10 5", "round");
+				    chart.title("Clustering");
+				    chart.container("container");
+				    chart.draw();
+				});
+			</script>
+		</div>
+		<br><br>
+		<p>En la agrupación de arriba todos los puntos representan a 2 tipos de compradores<br> de automoviles (dividida en 4 cuadrantes).<br>
+		Los puntos rojos representan a las personas que prefieren un vehículo modelo Audi Sedan.<br>
+		Los puntos verdes representan a las personas que prefieren un vehículo Chevrolet Sedan.<br>
+		</p>
+	</center>
+	<br><br>
+	
+</body>
+</html>
